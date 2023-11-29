@@ -1,4 +1,6 @@
 import blockContent from './blockContent'
-import post from './post'
+import concert from './concert'
+import release from './release'
+import global from './global'
 
-export const schemaTypes = [post, blockContent]
+export const schemaTypes = [global, concert, release, blockContent]

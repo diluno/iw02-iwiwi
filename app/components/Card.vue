@@ -11,28 +11,20 @@ export default {
 </script>
 
 <template>
-  <div
-    v-if="post"
-    class="card"
-  >
-    <img
-      v-if="post.mainImage"
-      class="card__cover"
-      :src="$urlFor(post.mainImage).width(500).height(300).url()"
-      alt="Cover image"
-    />
+  <div v-if="post"
+       class="card">
+    <img v-if="post.mainImage"
+         class="card__cover"
+         :src="$urlFor(post.mainImage).width(500).height(300).url()"
+         alt="Cover image" />
 
-    <div
-      v-else
-      class="card__cover--none"
-    />
+    <div v-else
+         class="card__cover--none" />
 
     <div class="card__container">
       <h3 class="card__title">
-        <a
-          class="card__link"
-          :href="`/post/${post.slug.current}`"
-        >
+        <a class="card__link"
+           :href="`/post/${post.slug.current}`">
           {{ post.title }}
         </a>
       </h3>
@@ -68,7 +60,6 @@ export default {
   }
 
   & .card__title {
-    font-family: var(--font-family-sans);
     font-weight: 800;
     font-size: var(--font-size-7);
     line-height: var(--line-height-6);
@@ -77,7 +68,6 @@ export default {
   }
 
   & .card__excerpt {
-    font-family: var(--font-family-serif);
     font-weight: 400;
     font-size: var(--font-size-4);
     line-height: var(--line-height-3);
@@ -86,7 +76,6 @@ export default {
 
   & .card__date {
     font-weight: 600;
-    font-family: var(--font-family-sans);
     font-size: var(--font-size-1);
     margin-top: calc(var(----space-4) + 7);
   }
